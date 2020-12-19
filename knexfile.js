@@ -38,9 +38,7 @@ module.exports = {
 
   production: {
     client: process.env.DB_CLIENT,
-    connection: {
-      database: process.env.DATABASE_URL,
-    },
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
@@ -48,6 +46,6 @@ module.exports = {
     migrations: {
       directory: './src/database/migrations'
     }
-  }
+  },
 
 };
