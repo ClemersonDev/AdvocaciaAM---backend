@@ -2,9 +2,9 @@
 exports.up = function(knex) {
     return knex.schema.createTable('clients', function (table) {
         table.string('id').primary();
-        table.string('name').notNullable();
-        table.string('email').notNullable();
-        table.string('phone').notNullable();
+        table.text('name').notNullable();
+        table.text('email').notNullable();
+        table.text('phone').notNullable();
     });
 };
 
