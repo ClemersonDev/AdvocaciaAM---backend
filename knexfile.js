@@ -38,8 +38,14 @@ module.exports = {
 
   production: {
     client: process.env.DB_CLIENT,
-    connection: process.env.DATABASE_URL,
-    ssl: true,
+    connection: {
+      database: process.env.DB_DATABASE,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      host: process.env.DB_HOST,
+      port: process.env.DB_PORT,
+      ssl: true,
+    }, 
     pool: {
       min: 2,
       max: 10
