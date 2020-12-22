@@ -7,10 +7,10 @@ module.exports = {
         const { name, email, phone, msgm } = request.body;
 
         let transporter = nodemailer.createTransport(smtpTransport({
-            service: "gmail",
-            host: "smtp.gmail.com",
+            service: "hotmail",
+            host: "smtp.live.com",
             port: 587,
-            secure: true,
+            secure: false,
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
